@@ -64,9 +64,9 @@
 
   ```html
   <body>
-    <div>
-      <p>Awesome text</p>
-    </div>
+  <div>
+  <p>Awesome text</p>
+  </div>
   </body>
   ```
 
@@ -185,6 +185,8 @@
 <details>
   <summary>Class names represent the meaning of the content (not the styles or tag names)</summary>
 
+  > Just folow BEM
+
   GOOD example
   ```html
   <nav class="nav">
@@ -211,6 +213,10 @@
 </details>
 
 ## CSS Formatting
+
+<details>
+  <summary></summary>
+</details>
 
 ## JavaScript Formatting
 
