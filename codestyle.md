@@ -49,8 +49,8 @@
 <details>
   <summary>Remember about correct indentation between parent and child elements</summary>
 
-  > Each level of nesting, including text, contained inside the element, requires 2-space offset.
-  > Also blank line shouldn't be between parent and child elements.
+  > Each level of nesting, including text, contained inside the element, requires a 2-space offset.
+  > Also blank lines shouldn't be between parent and child elements.
 
   GOOD example
 
@@ -118,9 +118,9 @@
 <details>
   <summary>Keep your attributes correctly formatted</summary>
 
-  > If the HTML-element has long attribute values or number of attributes is more than 2 - start each one,
-  including the first, on the new line with 2-space indentation related to tag.
-  Tag’s closing bracket should be on the same level as opening one.
+  > If the HTML element has long attribute values or the number of attributes is more than 2 - start each one,
+  including the first, on the new line with a 2-space indentation related to the tag.
+  The tag’s closing bracket should be on the same level as the opening one.
 
   GOOD Example
   ```html
@@ -187,7 +187,7 @@
 <details>
   <summary>Class names represent the meaning of the content (not the styles or tag names)</summary>
 
-  > Just folow BEM
+  > Just follow BEM
 
   GOOD example
   ```html
@@ -229,9 +229,9 @@
 </details>
 
 <details>
-  <summary>DON'T reset default styles in classes if you can make it by modifacating a tag</summary>
+  <summary>DON'T reset default styles in classes if you can make it by modifying a tag</summary>
   
-  > You can reset default styles like that:
+  > You can reset default styles like this:
   
   ```css 
   body {
@@ -243,7 +243,7 @@
 <details>
   <summary>DON'T use hardcoded values!!!</summary>
 
-  > Its bad practice, you will be punished 😈
+  > It is bad practice, you will be punished 😈
 
   BAD example
   ```scss
@@ -396,7 +396,7 @@ GOOD example
 <details>
   <summary>Write global constants in <b>upper snake case</b> </summary>
 
-  > Remember constants in `Mats` module
+  > Remember constants in the `Mats` module
 
   BAD example
   ```javascript
@@ -414,7 +414,7 @@ GOOD example
 <details>
   <summary><b>ALWAYS</b> add brackets for <b>arrow</b> functions</summary>
 
-  > Even if argument only one
+  > Even if the argument only one
 
   BAD example
   ```javascript
@@ -429,9 +429,9 @@ GOOD example
 
 ## TypeScript Formatting
 <details>
-  <summary>Avoid use enums. It is not so important, but preffer use next construction</summary>
+  <summary>Avoid using enums. It is not so important, but prefer to use the next construction</summary>
 
-  > Enums have some issues. More information [there](https://thoughtbot.com/blog/the-trouble-with-typescript-enums)
+  > Enums have some issues. More information [here](https://thoughtbot.com/blog/the-trouble-with-typescript-enums)
 
   ```typescript
   const FILTER = {
@@ -442,9 +442,9 @@ GOOD example
 </details>
 
 <details>
-  <summary>Try to avoid complicaded types in functions</summary>
+  <summary>Try to avoid complicated  types in functions</summary>
 
-  > better write type or interface
+  > Better write type or interface
 
   BAD example
   ```typescript
@@ -465,14 +465,14 @@ GOOD example
 <details>
   <summary><b>NEVER</b> use <code>any</code> type</summary>
 
-  > Its bad practice, you will be punished 😈
+  > It is bad practice, you will be punished 😈
 
 </details>
 
 <details>
   <summary>Don't forget about <code>!</code> and <code>?</code> operators</summary>
 
-  > Sometime its helps to wrile less code with the same logic
+  > Sometimes it helps to write less code with the same logic
 </details>
 
 ## React Components Formatting
@@ -502,13 +502,13 @@ GOOD example
 <details>
   <summary>Always use reexports</summary>
 
-  > Take kare about other developers and yourself
+  > Take care of other developers and yourself
 </details>
 
 ## Frameworks
 
 <details>
-  <summary>Don't forget about our code style and modificate presetuped linter and prettier rules</summary>
+  <summary>Don't forget about our code style and modification presetuped linter and prettier rules</summary>
 
   > Link to our [codestyle](https://github.com/BinoviTeam/prettier-settings)
 </details>
