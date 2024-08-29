@@ -40,6 +40,8 @@
 
 <details>
   <summary>Lines of code have <code>80</code> chars max</summary>
+
+  > Don't write spaghetti code
 </details>
 
 ## HTML Formatting
@@ -241,7 +243,7 @@
 <details>
   <summary>DON'T use hardcoded values!!!</summary>
 
-  > Its bad practice, you will bee punished
+  > Its bad practice, you will be punished 😈
 
   BAD example
   ```scss
@@ -272,7 +274,7 @@
 <details>
   <summary>If you use <b>SCSS</b>, write mixins and style documentation</summary>
 
-  > Remenber about reusing styles
+  > Remember about reusing styles
 
   ```scss
   @mixin on-tablet {
@@ -286,10 +288,10 @@
 ## JavaScript Formatting
 
 <details>
-  <summary>USE BLANK LINES. Make you code readable</summary>
+  <summary>USE BLANK LINES. Make your code readable</summary>
 
   BAD example
-  ```js
+  ```javascript
   const func = (...args) => {
     const arr = [];
     for (const arg of args) {
@@ -302,7 +304,7 @@
 ```
 
 GOOD example
-```js
+```javascript
   const func = (...args) => {
     const arr = [];
 
@@ -323,7 +325,7 @@ GOOD example
   > Use curve brackets
 
   BAD example
-  ```js
+  ```javascript
   const func = (...args) => {
     for (const arg of args) {
       if (!arg) return false;
@@ -334,7 +336,7 @@ GOOD example
   ```
 
   GOOD example
-  ```js
+  ```javascript
   const func = (...args) => {
     for (const arg of args) {
       if (!arg) {
@@ -353,14 +355,14 @@ GOOD example
   > Presetupped Prettier and ESLinter [included](https://github.com/BinoviTeam/prettier-settings) 
 
   BAD example
-  ```js
+  ```javascript
   let a = 1
   
   const b = { c: 1, d: 2 }
   ```
 
   GOOD example
-  ```js
+  ```javascript
   let a = 1;
   
   const b = {
@@ -370,10 +372,168 @@ GOOD example
   ```
 </details>
 
-## Variables Formatting
+<details>
+  <summary>Prefer use <code>const</code> instead a <code>let</code>. Make names suitable</summary>
 
-## Functions Formatting
+  BAD example
+  ```javascript
+  let a = 1
+  
+  const b = { c: 1, d: 2 }
+  ```
 
-## Components Formatting
+  GOOD example
+  ```javascript
+  const FILTER_INDEX = 1;
+  
+  const b = {
+    c: 1,
+    d: 2,
+  }
+  ```
+</details>
+
+<details>
+  <summary>Write global constants in <b>upper snake case</b> </summary>
+
+  > Remember constants in `Mats` module
+
+  BAD example
+  ```javascript
+  const filterIndex = 1
+  const sortByName = 'name';
+  ```
+
+  GOOD example
+  ```javascript
+  const FILTER_INDEX = 1;
+  const SOTR_BY_NAME = 'name';
+  ```
+</details>
+
+<details>
+  <summary><b>ALWAYS</b> add brackets for <b>arrow</b> functions</summary>
+
+  > Even if argument only one
+
+  BAD example
+  ```javascript
+  const func = arg => { ...some logic };
+  ```
+
+  GOOD example
+  ```javascript
+  const func = (arg) => { ...some logic };
+  ```
+</details>
 
 ## TypeScript Formatting
+<details>
+  <summary>Avoid use enums. It is not so important, but preffer use next construction</summary>
+
+  > Enums have some issues. More information [there](https://thoughtbot.com/blog/the-trouble-with-typescript-enums)
+
+  ```typescript
+  const FILTER = {
+    BY_NAME: 'name',
+    BY_PRICE: 'price',
+  } as const;
+  ```
+</details>
+
+<details>
+  <summary>Try to avoid complicaded types in functions</summary>
+
+  > better write type or interface
+
+  BAD example
+  ```typescript
+  const func = ({ a, b }: { a: string, b: string}): string = { ...some logic };
+  ```
+
+  GOOD example
+  ```typescript
+  interface FuncProps {
+    a: string;
+    b: string;
+  }
+
+  const func = ({ a, b }: FuncProps): string = { ...some logic };
+  ```
+</details>
+
+<details>
+  <summary><b>NEVER</b> use <code>any</code> type</summary>
+
+  > Its bad practice, you will be punished 😈
+
+</details>
+
+<details>
+  <summary>Don't forget about <code>!</code> and <code>?</code> operators</summary>
+
+  > Sometime its helps to wrile less code with the same logic
+</details>
+
+## React Components Formatting
+<details>
+  <summary>Write components with arrow functions</summary>
+
+  ```jsx
+  const Component = () => <></>
+  ```
+</details>
+
+<details>
+  <summary>Always apply types to your component</summary>
+
+  ```jsx
+  import { FC } from 'react';
+
+  interface Props {
+    a: string;
+    b: (c: string) => void;
+  }
+
+  const Component: FC<Props> = ({ a, b }) => <></>;
+  ```
+</details>
+
+<details>
+  <summary>Always use reexports</summary>
+
+  > Take kare about other developers and yourself
+</details>
+
+## Frameworks
+
+<details>
+  <summary>Don't forget about our code style and modificate presetuped linter and prettier rules</summary>
+
+  > Link to our [codestyle](https://github.com/BinoviTeam/prettier-settings)
+</details>
+
+<details>
+  <summary>Always change essentials rules to recommended</summary>
+
+  ```javascript
+  // Vue 3 presetuped ESLint rules
+
+ 
+  /* eslint-env node */
+  require('@rushstack/eslint-patch/modern-module-resolution');
+  
+  module.exports = {
+    root: true,
+    extends: [
+      'plugin:vue/vue3-recommended', ⬅️⬅️⬅️
+      'eslint:recommended', ⬅️⬅️⬅️
+      '@vue/eslint-config-typescript',
+      '@vue/eslint-config-prettier/skip-formatting',
+    ],
+    parserOptions: {
+      ecmaVersion: 'latest',
+    },
+  };
+  ```
+</details>
