@@ -23,7 +23,7 @@ The following **UI frameworks or preprocessors** should be used:
 Data validation is carried out using the **Zod** library. Using this library, input fields are validated. Data from the server is validated using **TypeScript types**.
 All other libraries depend on the type of project and are chosen individually.
 
-Also, **Prettier** and **ESLint** should be configured for each project. All projects should look **unified**. Basic Prettier settings will be provided in another [repository]().
+Also, **Prettier** and **ESLint** should be configured for each project. All projects should look **unified**. Basic Prettier settings will be provided in another [repository](https://github.com/BinoviTeam/prettier-settings/blob/main/prettierrc.json).
 
 When writing the **backend**, it is advisable to use **cloud data storage**. An example of such a database could be **Supabase**. **Prisma** is recommended as the ORM. **Tanstack Query** and **Axios** are used for communication with the database.
 
