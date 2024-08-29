@@ -215,10 +215,160 @@
 ## CSS Formatting
 
 <details>
-  <summary></summary>
+  <summary>DON'T use universal selector <code>*</code> for reset the styles</summary>
+  
+  > Use this selector only for normalizing styles
+
+  ```css
+  * {
+    box-sizing: border-box;
+  }
+  ```
+</details>
+
+<details>
+  <summary>DON'T reset default styles in classes if you can make it by modifacating a tag</summary>
+  
+  > You can reset default styles like that:
+  
+  ```css 
+  body {
+    margin: 0;
+  }
+  ```
+</details>
+
+<details>
+  <summary>DON'T use hardcoded values!!!</summary>
+
+  > Its bad practice, you will bee punished
+
+  BAD example
+  ```scss
+  .text {
+    color: #fff;
+  ```
+
+  GOOD example
+  ```scss
+  // variables.scss
+  
+  :root {
+    font-size: 12px;
+    font-weigth: 600;
+  }
+  
+  $text-color: #fff;
+  ```
+
+  ```scss
+  // text.scss
+
+  .text {
+    color: $text-color;
+  ```
+</details>
+
+<details>
+  <summary>If you use <b>SCSS</b>, write mixins and style documentation</summary>
+
+  > Remenber about reusing styles
+
+  ```scss
+  @mixin on-tablet {
+    @media (...) {
+      @content;
+    }
+  }
+  ```
 </details>
 
 ## JavaScript Formatting
+
+<details>
+  <summary>USE BLANK LINES. Make you code readable</summary>
+
+  BAD example
+  ```js
+  const func = (...args) => {
+    const arr = [];
+    for (const arg of args) {
+      if (arg) {
+        arr.push(arg);
+      };
+    };
+    return arr;
+  }
+```
+
+GOOD example
+```js
+  const func = (...args) => {
+    const arr = [];
+
+    for (const arg of args) {
+      if (arg) {
+        arr.push(arg);
+      };
+    };
+
+    return arr;
+  }
+```
+</details>
+
+<details>
+  <summary>DON'T return a value in the same line with condition</summary>
+
+  > Use curve brackets
+
+  BAD example
+  ```js
+  const func = (...args) => {
+    for (const arg of args) {
+      if (!arg) return false;
+    };
+
+    return true;
+  }
+  ```
+
+  GOOD example
+  ```js
+  const func = (...args) => {
+    for (const arg of args) {
+      if (!arg) {
+        return false;
+      };  
+    };
+  
+    return true;
+  }
+  ```
+</details>
+
+<details>
+  <summary>Always use semicolons and commas</summary>
+
+  > Presetupped Prettier and ESLinter [included](https://github.com/BinoviTeam/prettier-settings) 
+
+  BAD example
+  ```js
+  let a = 1
+  
+  const b = { c: 1, d: 2 }
+  ```
+
+  GOOD example
+  ```js
+  let a = 1;
+  
+  const b = {
+    c: 1,
+    d: 2,
+  }
+  ```
+</details>
 
 ## Variables Formatting
 
