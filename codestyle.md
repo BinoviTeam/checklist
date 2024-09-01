@@ -285,6 +285,61 @@
   ```
 </details>
 
+<details>
+  <summary>Write styles with this template</summary>
+
+  > It makes tour code more readable
+
+  Template:
+  ```
+  .class {
+    position;
+    block model;
+    text customization;
+    borders, animatiojns and other;
+  ```
+
+  **Warning**: use styles **logicaly** and **use blank lines**.
+
+  BAD example
+  ```css
+  .class {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    text-size: 20px;
+    top: 10px;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #000;
+    border: 1px solid #000;
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+  ```
+
+  GOOD example
+  ```css
+  .class {
+    position: absolute;
+    top: 10px;
+
+    box-sizing: border-box;
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+
+    text-size: 20px;
+    font-weight: 700;
+    color: #000;
+
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #000;
+  ```
+  
+</details>
+
 ## JavaScript Formatting
 
 <details>
