@@ -288,7 +288,7 @@
 <details>
   <summary>Write styles with this template</summary>
 
-  > It makes tour code more readable
+  > It makes your code more readable
 
   Template:
   ```
