@@ -569,7 +569,7 @@ GOOD example
 </details>
 
 <details>
-  <summary>Always change essentials rules to recommended</summary>
+  <summary>Always change essential rules to recommended</summary>
 
   ```javascript
   // Vue 3 pre-configured ESLint rules
