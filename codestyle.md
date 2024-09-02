@@ -299,7 +299,7 @@
     borders, animatiojns and other;
   ```
 
-  **Warning**: use styles **logicaly** and **use blank lines**.
+  **Warning**: use styles **logically** and **use blank lines**.
 
   BAD example
   ```css
@@ -469,7 +469,7 @@ GOOD example
 <details>
   <summary><b>ALWAYS</b> add brackets for <b>arrow</b> functions</summary>
 
-  > Even if the argument only one
+  > Even if the argument is only one
 
   BAD example
   ```javascript
@@ -563,7 +563,7 @@ GOOD example
 ## Frameworks
 
 <details>
-  <summary>Don't forget about our code style and modification presetuped linter and prettier rules</summary>
+  <summary>Don't forget about our code style and modification pre-configured linter and prettier rules</summary>
 
   > Link to our [codestyle](https://github.com/BinoviTeam/prettier-settings)
 </details>
@@ -572,7 +572,7 @@ GOOD example
   <summary>Always change essentials rules to recommended</summary>
 
   ```javascript
-  // Vue 3 presetuped ESLint rules
+  // Vue 3 pre-configured ESLint rules
 
  
   /* eslint-env node */
