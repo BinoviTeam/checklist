@@ -592,3 +592,34 @@ GOOD example
   };
   ```
 </details>
+
+<details>
+  <summary>Sort imports wisely</summary>
+  Example with Vue.js
+  
+  ```vue
+    <script setup lang="ts">
+      import { ref } from 'vue';
+      import { RouterLink } from 'vue-router';
+
+      import { type SomeType } from '@types';
+    
+      import { SOME_CONSTANT } from '@/constants';
+      import { useSomething } from '@/hooks';
+
+      import { SomeComponent } from '@/components';
+
+      import someImage from '@/assets/img/someImage.svg';
+
+      import styles from './styles.module.scss';
+    </script>
+  ```
+
+  Order of imports:
+  1. Library imports (core technologies have higher priority)
+  2. Custom types
+  3. Constants, hooks, utils, composables, ets
+  4. Components
+  5. Static files like images
+  6. Styles
+</details>
